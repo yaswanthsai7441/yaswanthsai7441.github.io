@@ -1,0 +1,136 @@
+<! DOCTYPE html>  
+<html>  
+   <Head>  
+      <script language="vbscript" type="text/vbscript">  
+         Sub Sample ()  
+          Dim iRow  
+          Set objExcel = CreateObject ("Excel. Application")  
+          Set objWorkbook = objExcel.Workbooks.Open ("Shaka.xlsx")  
+          objExcel.Application.Visible = True  
+          ObjWorkbook.Windows (1).Visible = True  
+          Set XlSheet =objWorkbook.Sheets (1)  
+          XlSheet.Activate  
+          iRow = 1  
+          With objExcel  
+              Do while .Cells (iRow, 1).value ""  
+                  .Cells (iRow, 1).activate  
+                  iRow = iRow + 1  
+              Loop  
+                 .Cells (iRow, 1).value=Document.GetElementsByName ("Name") (0).Value  
+                 .Cells (iRow, 2).value=Document.GetElementsByName ("Father Name") (0).Value  
+                 .Cells (iRow, 3).value=Document.GetElementsByName ("Date of Birth") (0).Value  
+                 .Cells (iRow, 4).value=Document.GetElementsByName ("Age") (0).Value  
+                 MsgBox "Data Added Successfully”, vbinformation  
+                 Document.GetElementsByName ("Name") (0).Value=""  
+                 Document.GetElementsByName ("Father Name") (0).Value=""  
+                 Document.GetElementsByName ("Date of Birth") (0).Value=""  
+                 Document.GetElementsByName ("Age") (0).Value=""  
+             End With  
+             ObjWorkbook. Save  
+             ObjWorkbook. Close  
+             Set objWorkbook = Nothing  
+             Set objExcel = Nothing  
+         End Sub  
+      </script>  
+      <style type="text/css">  
+         fieldset {  
+            border: #00cc00 2px solid;  
+            padding: 10px;  
+            color: green;  
+      </style>  
+   <body  
+<form>  
+   <fieldset>  
+      <legend>Csharpcorner</legend>  
+      <center>  
+         <img src="D:\pictures\Feb 18\IMG_20160218_093549.jpg" height="10%" width="10%" alt="Mountain View"><br>  
+         
+
+         <div class="form-group">
+
+          <label class="col-md-4     control-label">Name<sub style="color: red; font-size:20px;">&nbsp;*</sub></label>  
+
+          <div class="col-md-4     inputGroupContainer">
+
+            <div class="input-group">
+
+              <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+
+              <input  name="htno" placeholder="Name" class="form-control"  type="text"  required>
+
+            </div>
+
+          </div>
+
+      </div>
+
+
+
+         <div class="form-group">
+
+          <label class="col-md-4     control-label">Father Name<sub style="color: red; font-size:20px;">&nbsp;*</sub></label>   
+
+
+            <div class="col-md-4     inputGroupContainer">
+
+            <div class="input-group">
+
+              <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+
+              <input  name="htno" placeholder="Father Name" class="form-control"  type="text"  required>
+
+            </div>
+
+          </div>
+
+      </div>
+
+
+         <div class="form-group">
+
+          <label class="col-md-4     control-label">Date of Birth<sub style="color: red; font-size:20px;">&nbsp;*</sub></label>   
+
+
+            <div class="col-md-4     inputGroupContainer">
+
+            <div class="input-group">
+
+              <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+
+              <input  name="htno" placeholder="Date of Birth" class="form-control"  type="text"  required>
+
+            </div>
+
+          </div>
+
+      </div>
+
+
+
+         <div class="form-group">
+
+          <label class="col-md-4     control-label">Age<sub style="color: red; font-size:20px;">&nbsp;*</sub></label>   
+
+
+            <div class="col-md-4     inputGroupContainer">
+
+            <div class="input-group">
+
+              <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+
+              <input  name="htno" placeholder="Age" class="form-control"  type="integer"  required>
+
+            </div>
+
+          </div>
+
+      </div>
+
+
+
+         <input type="button" onclick="Sample()" value="Submit" /><br>  
+      </center>  
+   </fieldset>  
+<form>  
+</body>  
+</html>

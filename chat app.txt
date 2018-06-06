@@ -1,0 +1,47 @@
+
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+        <script src="script.js"></script>
+        <title>
+            Chat App
+        </title>
+        <style>
+            *{
+                margin:1%;
+                padding:0;
+                border:0;
+            }
+            #display-Box{
+                border:2px solid grey;
+                margin:1%;
+                height: 65%;
+                width: 55%;
+                padding:2%;
+                overflow:auto;;
+            }
+            #msg{
+                margin:1%;
+                border:0.5px solid grey;
+                width: 35%;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            setTimeout(setup(),500);    
+        </script>
+        <div id="set">
+            <input placeholder="Enter your Nickname" id="user" style="border:0.5px solid grey;"/>
+            <button type="submit" onclick="setUser()">Submit</button>
+        </div>
+        <div style="display:none;" id="msgbox">
+            <div id="display-Box" width="25%" height="25%"></div><br/>
+            <b id="typer"></b>
+            <input type="text" name="text" id ="msg" placeholder="Send Message"/>
+            <button type="submit" onclick="msgTyped()" style="font-size:15px;border:0.6px solid black">Send</button>
+            <b>Total Messages : </b><b id="count"></b>
+        </div>
+    </body>
+
+</html>
