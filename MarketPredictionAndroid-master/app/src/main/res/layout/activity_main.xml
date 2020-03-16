@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layoutDirection="ltr"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/stock_spinner"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/start_date_textView"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/stock_spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:hint="Start date"
+        android:textSize="18sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/end_date_textView"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/start_date_textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:hint="End date"
+        android:textSize="18sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/result_textView"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/end_date_textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:clickable="false"
+        android:focusable="true"
+        android:gravity="center"
+        android:hint="Result"
+        android:textSize="18sp"
+        tools:ignore="HardcodedText" />
+
+
+    <Button
+        android:id="@+id/get_prediction_result"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="PREDICT"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>
